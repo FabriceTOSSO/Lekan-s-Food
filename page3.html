@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci !</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            overflow-x: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .thank-you-container {
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b6b, #ffa3a3, #feca57);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 5s infinite alternate;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .btn-return {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #6b66ff, #57b3fe);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(107, 102, 255, 0.4);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        .btn-return:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(107, 102, 255, 0.6);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Éléments animés */
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            animation: float linear infinite;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #f00;
+            opacity: 0;
+            z-index: 1;
+            animation: confettiFall 5s linear forwards;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        @keyframes confettiFall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: #ff6b6b;
+            animation: heartFloat 4s ease-in infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes heartFloat {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <i class="fas fa-check-circle" style="font-size: 5rem; color: #4CAF50; margin-bottom: 1rem;"></i>
+        <h1>Message Envoyé !</h1>
+        <p>Merci pour votre message. Nous vous répondrons dans les plus brefs délais.</p>
+        <p>En attendant, pourquoi ne pas consulter nos plats du jour ou passer une nouvelle commande ?</p>
+        <a href="index.html" class="btn-return">Retour au menu principal</a>
+    </div>
+
+    <script>
+        // Création d'étoiles animées
+        function createStars() {
+            const colors = ['#ffffff', '#ffe08c', '#a2d5f2', '#ffb6b6'];
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.width = Math.random() * 5 + 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDuration = Math.random() * 10 + 5 + 's';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.opacity = Math.random();
+                document.body.appendChild(star);
+            }
+        }
+        
+        // Création de confettis
+        function createConfetti() {
+            const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50', '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800', '#FF5722'];
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                confetti.style.animationDelay = Math.random() * 2 + 's';
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                document.body.appendChild(confetti);
+            }
+        }
+        
+        // Création de coeurs flottants
+        function createHearts() {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.innerHTML = '<i class="fas fa-heart"></i>';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.bottom = '-20px';
+                    heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+                    document.body.appendChild(heart);
+                    
+                    // Supprimer le coeur après l'animation
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 4000);
+                }, i * 500);
+            }
+        }
+        
+        // Lancer les animations
+        window.onload = function() {
+            createStars();
+            createConfetti();
+            createHearts();
+            
+            // Répéter les coeurs toutes les 3 secondes
+            setInterval(createHearts, 3000);
+        };
+    </script>
+</body>
+</html>

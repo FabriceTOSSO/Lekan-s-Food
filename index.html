@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekan's Food - Restaurant en ligne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+   
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="knife"></div>
+            <div class="fork"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Lekan's  <span>Food</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-overlay"></div>
+<nav class="mobile-nav">
+    <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Accueil</a></li>
+        <li><a href="#menu" class="mobile-nav-link">Menu</a></li>
+        <li><a href="#about" class="mobile-nav-link">À propos</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+</nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+       
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=60')"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=60')"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1600&q=60')"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+               
+                <div class="animated-text">
+                    <h1 class="hero-title animate__animated animate__fadeInDown">Cuisine d'exception</h1>
+                    
+                </div>
+                
+<span class="word" data-order="1">Savoureuse</span>
+<span class="word" data-order="2">Raffinée</span>
+<span class="word" data-order="3">Authentique</span>
+<span class="word" data-order="4">Généreuse</span>
+
+                
+                
+                <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-1-5s">
+                    <a href="#menu" class="btn btn-primary pulse">Voir le menu</a>
+                    <a href="#contact" class="btn btn-secondary">Commander</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plats flottants -->
+        <div class="floating-dishes">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=60" alt="Salade" class="dish animate-float" style="--duration: 20s; --start-x: 10%; --start-y: 20%;">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=200&q=60" alt="Risotto" class="dish animate-float" style="--duration: 25s; --start-x: 80%; --start-y: 30%;">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=200&q=60" alt="Dessert" class="dish animate-float" style="--duration: 30s; --start-x: 30%; --start-y: 70%;">
+        </div>
+
+        <!-- Défilement vers le bas -->
+        <a href="#menu" class="scroll-down">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </section>
+
+
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Notre Menu</h2>
+                <p>Des plats préparés avec des ingrédients frais et de saison</p>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="entrees">Entrées</button>
+                <button class="tab-btn" data-category="plats">Plats Principaux</button>
+                <button class="tab-btn" data-category="desserts">Desserts</button>
+            </div>
+
+            <div class="menu-items">
+                <!-- Entrées -->
+                <div class="menu-category active" id="entrees">
+
+              <div class="menu-item" data-item="1">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 17.07.31_1f632cb0.jpg" alt="Salade Gourmande">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Salade simple</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">1000 F CFA </span>
+                                <button class="btn-order" data-whatsapp="Salade simple - 1000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 17.07.31_1f632cb0.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="menu-item" data-item="1">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 17.07.19_2d40a359.jpg" alt="Salade Gourmande">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Salade accompagné de poulet</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">1500 F CFA </span>
+                                <button class="btn-order" data-whatsapp="Salade accompagné de poulet - 1500 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 17.07.19_2d40a359.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                 <div class="menu-item" data-item="1">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 17.06.55_11169184.jpg" alt="Salade Gourmande">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Salade de fruits</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">1000 F CFA </span>
+                                <button class="btn-order" data-whatsapp="Salade Gourmande - 1000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 17.06.55_11169184.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="1">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Salade Gourmande">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Salade Gourmande</h3>
+                            <p>Mélange de jeunes pousses, noix de pécan, fromage de chèvre et vinaigrette aux framboises</p>
+                            <div class="item-footer">
+                                <span class="price">7000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Salade Gourmande - 7000 F CFA"
+                                data-image="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="2">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Tartare de Saumon">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Tartare de Saumon</h3>
+                            <p>Saumon frais mariné au citron et aneth, servi avec toasts croustillants</p>
+                            <div class="item-footer">
+                                <span class="price">8000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Tartare de Saumon - 8000 F CFA"
+                                data-image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plats Principaux -->
+                <div class="menu-category" id="plats">
+
+                 <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.23.44_96f821cc.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Poisson braisé accompagné du riz au gras</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">2500 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Poisson braisé accompagné du riz au gras - 2500 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.23.44_96f821cc.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+             <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.24.34_222b7ed0.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Piron accompagné d’Aileron</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">2000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Piron accompagné d’Aileron - 2000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.24.34_222b7ed0.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+             <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.25.28_1f771464.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Poisson Braisé accompagné d’alloco</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">2000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Poisson Braisé accompagné d’alloco - 2000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.25.28_1f771464.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+              <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.28.19_7c57b4cf.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Riz au gras accompagné d’alloco et poisson  frit</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">3000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Riz au gras accompagné d’alloco et poisson  frit - 3000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.28.19_7c57b4cf.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+             <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.29.11_6caa832a.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Atassi + Alloco + Poisson</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">2000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Atassi + Alloco + Poisson - 2000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.29.11_6caa832a.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+               <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.29.53_ee73333c.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Alloco accompagné d’omelette</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">1500 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Alloco accompagné d’omelette - 1500 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.29.53_ee73333c.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.31.33_e613fe52.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Indomie accompagné d’œuf + poisson</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">1500 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Indomie accompagné d’œuf + poisson - 1500 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.31.33_e613fe52.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+              <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.32.29_c497d027.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Riz accompagné du viande de poulet haché</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">2000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Riz accompagné du viande de poulet haché - 2000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.32.29_c497d027.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                 <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.32.51_b848f53b.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Pain accompagné du viande hachée</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">1000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Pain accompagné du viande hachée - 1000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.32.51_b848f53b.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.34.28_eac6f268.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Pâte noir accompagné du sauce tomate + poisson + fromage + crin-crin</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">2000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Pâte noir accompagné du sauce tomate + poisson + fromage + crin-crin - 2000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.34.28_eac6f268.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+            <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.35.02_87b5b164.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Aileron accompagné du jus</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">1000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Aileron accompagné du jus - 1000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.35.02_87b5b164.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+              <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.35.37_f801e396.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Riz créole accompagné d’aileron</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">2000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Riz créole accompagné d’aileron - 2000 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.35.37_f801e396.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="3">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.27.39_133fdeac.jpg" alt="Filet de Boeuf">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>chawarma au poulet</h3>
+                           
+                            <div class="item-footer">
+                                <span class="price">1500 F CFA</span>
+                                <button class="btn-order" data-whatsapp="chawarma au poulet - 1500 F CFA"
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.27.39_133fdeac.jpg">
+                                Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="4">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.26.25_c73e21ba.jpg" alt="Risotto aux Champignons">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Piron accompagné du poulet braisé</h3>
+                           
+                            <div class="item-footer">
+                                <span class="price">3000 F CFA</span>
+                                <button class="btn-order" data-whatsapp="Piron accompagné du poulet braisé - 3000 F CFA" 
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.26.25_c73e21ba.jpg">
+                                Commander
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-category" id="desserts">
+                    <div class="menu-item" data-item="5">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.27.57_e8954fe3.jpg" alt="Fondant au Chocolat">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Mini cake</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">100 F CFA l'unité</span>
+                                <button class="btn-order" 
+                                data-whatsapp="100 F CFA l'unité"
+                                 data-image="image\WhatsApp Image 2025-07-22 à 16.27.57_e8954fe3.jpg">
+                                
+                                Commander
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-item="6">
+                        <div class="item-image">
+                            <img src="image\WhatsApp Image 2025-07-22 à 16.30.16_c3181877.jpg" alt="Tarte aux Fruits">
+                            <div class="image-overlay">
+                                <button class="btn-view">Vue rapprochée</button>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Crêpe au chocolat</h3>
+                            
+                            <div class="item-footer">
+                                <span class="price">500 F CFA </span>
+                                <button class="btn-order" data-whatsapp="Crêpe au chocolat - 500 F CFA" 
+                                data-image="image\WhatsApp Image 2025-07-22 à 16.30.16_c3181877.jpg"></button>>Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    
+                    
+                    <p>Nous nous engageons à utiliser des produits locaux et de saison, travaillant en direct avec les producteurs de notre région pour vous offrir une expérience culinaire exceptionnelle.</p>
+                    <div class="signature">
+                       
+                        <span>Euclide O. OSSE, Chef Fondateur</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NDB8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Notre Restaurant">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contactez-nous</h2>
+                <p>Pour les commandes ou questions, n'hésitez pas à nous contacter</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Sèmè-Podji / Porto-Novo</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+229 01 61 59 10 90</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>euclideolamilekanosse@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Ouvert du Lundi au Samedi<br>09h-18h</p>
+                    </div>
+                </div>
+
+               <div class="contact-form">
+    <form action="https://formsubmit.co/euclideolamilekanosse@gmail.com" method="POST">
+        <!-- Configuration FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio!">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="page3.html">
+        
+        <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Votre nom</label>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Votre email</label>
+        </div>
+        <div class="form-group">
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Votre message</label>
+        </div>
+        
+        <button type="submit" class="btn-submit">
+            <span class="btn-text">Envoyer le message</span>
+            <span class="btn-icon">
+                <i class="fas fa-paper-plane"></i>
+            </span>
+            <span class="btn-loading">
+                <i class="fas fa-circle-notch fa-spin"></i>
+            </span>
+            <span class="btn-success">
+                <i class="fas fa-check"></i>
+            </span>
+        </button>
+    </form>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Lekan's Food</h3>
+                    <p>Cuisine d'exception depuis 2024. Nous nous engageons à vous offrir une expérience gastronomique mémorable.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>Sèmè-Podji / <br>Porto-Novo</p>
+                    <p>euclideolamilekanosse@gmail.com<br>+229 01 61 59 10 90</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1LxSpwCWPK/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/euclide.osse?igsh=MThwdTRxaWg5bzVudA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="footer-bottom">
+    <div class="container">
+        <p>&copy; 2025 Lekan's Food. Tous droits réservés. | Réalisé par 
+           <a href="https://mon-portfolio-festof.netlify.app/" target="_blank" rel="noopener noreferrer" class="festof-link">FESTOF</a>
+        </p>
+    </div>
+</div>
+    </footer>
+
+    <!-- Modal pour l'image agrandie -->
+    <div class="modal" id="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <!-- Notification de commande -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <p id="notification-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
